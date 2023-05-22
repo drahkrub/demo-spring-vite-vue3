@@ -13,10 +13,11 @@ export default defineConfig({
   },
   // CHANGED/ADDED - START
   build: {
-    outDir: '../../resources/static/target/vite-project',
+    // outDir: '../../resources/static/vite-project',
+    outDir: '../../../../target/classes/static/vite-project',
     emptyOutDir: true
   },
-  base: '/target/vite-project/',
+  base: '/vite-project/',
   define: {
     'process.env.VUE_ROUTER_BASE': '"/v/"'
   },

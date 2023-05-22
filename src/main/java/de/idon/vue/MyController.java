@@ -16,11 +16,11 @@ public class MyController {
 
     @GetMapping("/v/**") // v like in vite
 	public String viteProject() {
-        return "forward:/target/vite-project/index.html";
+        return "forward:/vite-project/index.html";
     }
     
     @GetMapping("/w/**") // w like in webpack
 	public String vueCliProject() {
-        return "forward:/target/vue-cli-project/index.html";
+        return "forward:/vue-cli-project/index.html";
     }
 }

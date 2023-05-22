@@ -5,8 +5,9 @@ module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
   // CHANGED/ADDED - START
-  outputDir: "../../resources/static/target/vue-cli-project",
-  publicPath: "/target/vue-cli-project/",
+  //outputDir: "../../resources/static/vue-cli-project",
+  outputDir: "../../../../target/classes/static/vue-cli-project",
+  publicPath: "/vue-cli-project/",
   devServer: {
     proxy: {
       ".*": {
