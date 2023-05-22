@@ -1,13 +1,13 @@
-package de.idon.vite;
+package de.idon.vue;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ViteApplication {
+public class MyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ViteApplication.class, args);
+		SpringApplication.run(MyApplication.class, args);
 	}
 
 }

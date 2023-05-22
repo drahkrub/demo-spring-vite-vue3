@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>de.idon</groupId>
-	<artifactId>vite</artifactId>
+	<artifactId>spring-boot-vue-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>vite</name>
-	<description>Demo project for Spring Boot as backend for Vite + Vue 3</description>
+	<name>spring_boot_with_vue</name>
+	<description>Demo project for Spring Boot as backend for Vue 3 (vite and vue-cli)</description>
 	<properties>
 		<java.version>11</java.version>
         <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
@@ -55,21 +55,39 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>yarn: vue-project</id>
+                        <id>yarn: vite-project</id>
                         <goals>
                             <goal>yarn</goal>
                         </goals>
                         <configuration>
-                            <arguments>--cwd src/main/frontend/vue-project</arguments>
+                            <arguments>--cwd src/main/frontend/vite-project</arguments>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>yarn: build vue-project</id>
+                        <id>yarn: build vite-project</id>
                         <goals>
                             <goal>yarn</goal>
                         </goals>
                         <configuration>
-                            <arguments>--cwd src/main/frontend/vue-project build</arguments>
+                            <arguments>--cwd src/main/frontend/vite-project build</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>yarn: vue-cli-project</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>--cwd src/main/frontend/vue-cli-project</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>yarn: build vue-cli-project</id>
+                        <goals>
+                            <goal>yarn</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>--cwd src/main/frontend/vue-cli-project build</arguments>
                         </configuration>
                     </execution>
                 </executions>

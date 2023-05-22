@@ -13,20 +13,20 @@ export default defineConfig({
   },
   // CHANGED/ADDED - START
   build: {
-    outDir: '../../resources/static/target/vue-project',
+    outDir: '../../resources/static/target/vite-project',
     emptyOutDir: true
   },
-  base: '/target/vue-project/',
+  base: '/target/vite-project/',
   define: {
-    'process.env.VUE_ROUTER_BASE': '"/vp/"'
+    'process.env.VUE_ROUTER_BASE': '"/v/"'
   },
   server: {
     proxy: {
-      // '^^(?!/vp/).*$': {
+      // '^^(?!/v/).*$': {
       //   target: 'http://localhost:8080',
       //   changeOrigin: true
       // }
-      // '^^/vp/$': {
+      // '^^/v/$': {
       //   target: 'http://localhost:8080',
       //   changeOrigin: true
       // }

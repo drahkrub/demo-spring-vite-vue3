@@ -1,4 +1,4 @@
-package de.idon.vite;
+package de.idon.vue;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -14,8 +14,13 @@ public class MyController {
         return "{\"message\": \"some JSON\"}";
     }
 
-    @GetMapping("/vp/**")
-	public String vueProject() {
-        return "forward:/target/vue-project/index.html";
+    @GetMapping("/v/**") // v like in vite
+	public String viteProject() {
+        return "forward:/target/vite-project/index.html";
+    }
+    
+    @GetMapping("/w/**") // w like in webpack
+	public String vueCliProject() {
+        return "forward:/target/vue-cli-project/index.html";
     }
 }
