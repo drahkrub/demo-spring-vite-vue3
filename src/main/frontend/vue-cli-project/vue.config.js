@@ -9,6 +9,7 @@ module.exports = defineConfig({
   outputDir: "../../../../target/classes/static/vue-cli-project",
   publicPath: "/vue-cli-project/",
   devServer: {
+    open: "/w/",
     proxy: {
       ".*": {
         target: "http://localhost:8080",

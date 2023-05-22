@@ -14,12 +14,12 @@ public class MyController {
         return "{\"message\": \"some JSON\"}";
     }
 
-    @GetMapping("/v/**") // v like in vite
+    @GetMapping("/v/**")
 	public String viteProject() {
         return "forward:/vite-project/index.html";
     }
     
-    @GetMapping("/w/**") // w like in webpack
+    @GetMapping("/w/**")
 	public String vueCliProject() {
         return "forward:/vue-cli-project/index.html";
     }

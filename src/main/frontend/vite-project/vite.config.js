@@ -22,14 +22,30 @@ export default defineConfig({
     'process.env.VUE_ROUTER_BASE': '"/v/"'
   },
   server: {
+    // open: '/v/',
+    open: true,
     proxy: {
-      // '^^(?!/v/).*$': {
+      // this works, but what if you have hundreds of different backend URLs?
+      // '/api': {
       //   target: 'http://localhost:8080',
       //   changeOrigin: true
       // }
-      // '^^/v/$': {
+      // first try like in vue.config.js - destroys live reload!
+      // '^.*': {
+      //   target: 'http://localhost:8080',
+      //   changeOrigin: true,
+      //   ws: false,
+      //   bypass: function (req, res, options) {
+      //     if (req.url.startsWith('/v/')) {
+      //       return req.url
+      //     }
+      //   }
+      // }
+      // second try - does also not work:
+      // '^^(?!/v/).*$': {
       //   target: 'http://localhost:8080',
       //   changeOrigin: true
+      //   ws: false,
       // }
     }
   }
