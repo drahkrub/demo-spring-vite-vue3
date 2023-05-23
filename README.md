@@ -1,4 +1,4 @@
-# spring_boot_with_vue
+# demo-spring-vite-vue3
 
 This is a **very** small [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) project
 which uses **two** simplified [Vue.js](https://vuejs.org/) demo projects as (part of) its frontend.
