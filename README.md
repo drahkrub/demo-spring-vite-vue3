@@ -97,3 +97,9 @@ In `src/main/frontend/vite-project` start a dev server via the command `yarn dev
 - to proxy all URLs except the ones starting with the Vue Router base URL without (at least) destroying the live reload feature of the dev server?
 
 (any PRs are welcome)
+
+Some links:
+
+* https://github.com/vitejs/vite/discussions/13299
+* https://stackoverflow.com/questions/76309242/switching-from-vue-cli-to-vite-with-spring-boot-as-backend-dev-server-not-worki
+* https://stackoverflow.com/questions/75753422/vite-dev-servers-hmr-not-working-with-spring-boot
