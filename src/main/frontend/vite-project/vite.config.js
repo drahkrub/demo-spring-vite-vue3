@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [vue()],
   resolve: {
     alias: {
@@ -17,7 +17,8 @@ export default defineConfig({
     outDir: '../../../../target/classes/static/vite-project',
     emptyOutDir: true
   },
-  base: '/vite-project/',
+  base: mode === 'production' ? '/vite-project/' : '/v/',
+  // base: '/vite-project/',
   define: {
     'process.env.VUE_ROUTER_BASE': '"/v/"'
   },
@@ -31,16 +32,16 @@ export default defineConfig({
       //   changeOrigin: true
       // }
       // first try like in vue.config.js - destroys live reload!
-      // '^.*': {
-      //   target: 'http://localhost:8080',
-      //   changeOrigin: true,
-      //   ws: false,
-      //   bypass: function (req, res, options) {
-      //     if (req.url.startsWith('/v/')) {
-      //       return req.url
-      //     }
-      //   }
-      // }
+      '^.*': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        ws: false,
+        bypass: function (req /*, res, options */) {
+          if (req.url.startsWith('/v/')) {
+            return req.url
+          }
+        }
+      }
       // second try - does also not work:
       // '^^(?!/v/).*$': {
       //   target: 'http://localhost:8080',
@@ -50,4 +51,4 @@ export default defineConfig({
     }
   }
   // CHANGED/ADDED - END
-})
+}))
